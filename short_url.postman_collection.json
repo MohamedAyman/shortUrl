@@ -1,0 +1,109 @@
+{
+	"variables": [],
+	"info": {
+		"name": "short_url",
+		"_postman_id": "abf9c8ee-8f6a-2f7e-353d-3d19150a7ee5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/add_url",
+			"request": {
+				"url": "localhost:8080/add_url",
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "admin",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "admin",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic VVNFUl9DTElFTlRfQVBQOnBhc3N3b3Jk",
+						"description": ""
+					},
+					{
+						"key": "secret",
+						"value": "Password",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "www.google.com"
+				},
+				"description": "add new url to get short one"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/original_url/Ind3dy",
+			"request": {
+				"url": "localhost:8080/original_url/Ind3dy",
+				"method": "GET",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "admin",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "admin",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic VVNFUl9DTElFTlRfQVBQOnBhc3N3b3Jk",
+						"description": ""
+					},
+					{
+						"key": "secret",
+						"value": "Password",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"www.facebook.com\"\n"
+				},
+				"description": "get original url from short code"
+			},
+			"response": []
+		}
+	]
+}
