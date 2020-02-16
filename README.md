@@ -14,7 +14,7 @@ docker-compose up
 ```
 you can use postman collection to test the apis
 
-
+# run application using docker and creating network for them
 
 ## build application jar
 go to application directory then run the following command from terminal
