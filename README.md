@@ -6,6 +6,16 @@ It has 2 end points
 It uses mysql to store the data
 You can find also postman collection you can run it to test the apis
 
+## run the application using docker compose
+just download the source code and move to directory 
+'run_with_docker_compose' and run from terminal the following command
+```bash
+docker-compose up
+```
+you can use postman collection to test the apis
+
+
+
 ## build application jar
 go to application directory then run the following command from terminal
 ```bash
