@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  mysql-docker-container:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=short_url
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_HOST=localhost
+    volumes:
+      - /data/mysql
+  spring-boot-jpa-app:
+    image: spring-boot-jpa-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-docker-container/short_url?autoReconnect=true&failOverReadOnly=false&maxReconnects=10&useSSL=false
+    ports:
+      - 8080:8080
+    volumes:
+      - /data/spring-boot-app
